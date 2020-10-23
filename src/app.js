@@ -150,16 +150,14 @@ function filterTodo(event) {
     }
 
     function removeLocalTodos(todo) {
-        console.log("hello");
         let todos;
 
-        if (localStorage.getItem("todos") === null) {
+        if(localStorage.getItem('todos') === null) {
             todos = [];
         } else {
-            todos = JSON.parse(localStorage.getItem("todos"));    
+            todos = JSON.parse(localStorage.getItem('todos'));
         }
         
         const todoIndex = todo.children[0].innerText;
-        console.log(todos.splice(todos.indexOf(todoIndex), 1));
-        localStorage.setItem("todos", JSON.stringify(todos));
-    } 
+        todos.splice(todos.indexOf(todoIndex), 1);
+    }
