@@ -114,9 +114,7 @@ function getTodos(){
         todos = [];
     } else {
         todos = JSON.parse(localStorage.getItem('todos'));
-    } 
-
-    todos.forEach(function(todo) {
+        todos.forEach(function(todo) {
         const todoDiv = document.createElement("div")
         todoDiv.classList.add("todo")
 
@@ -141,10 +139,10 @@ function getTodos(){
         //APPEND TO LIST
         todoList.appendChild(todoDiv);
         });
+    }
+    }
 
-}
-
-function removeLocalTodos(todo) {
+    function removeLocalTodos(todo) {
         let todos;
 
         if(localStorage.getItem('todos') === null) {
