@@ -17,37 +17,37 @@ filterOption.addEventListener('click', filterTodo);
 //Functions
 
 function addTodo(event) {
-event.preventDefault();
-const todoDiv = document.createElement("div")
-todoDiv.classList.add("todo")
+    event.preventDefault();
+    const todoDiv = document.createElement("div")
+    todoDiv.classList.add("todo")
 
-// CREATE LI
-const newTodo = document.createElement('li')
-newTodo.innerText = todoInput.value;
-newTodo.classList.add('todo-item');
-todoDiv.appendChild(newTodo);
+    // CREATE LI
+    const newTodo = document.createElement('li')
+    newTodo.innerText = todoInput.value;
+    newTodo.classList.add('todo-item');
+    todoDiv.appendChild(newTodo);
 
-//ADD TODO TO LOCAL STORAGE 
-saveLocalTodos(todoInput.value);
+    //ADD TODO TO LOCAL STORAGE 
+    saveLocalTodos(todoInput.value);
 
-//CHECK MARK BUTTON
-const completedButton = document.createElement('button');
-completedButton.innerHTML = '<i class="fas fa-check"></i>';
-completedButton.classList.add("complete-btn")
-todoDiv.appendChild(completedButton);
+    //CHECK MARK BUTTON
+    const completedButton = document.createElement('button');
+    completedButton.innerHTML = '<i class="fas fa-check"></i>';
+    completedButton.classList.add("complete-btn")
+    todoDiv.appendChild(completedButton);
 
-//CHECK TRASH BUTTON
-const trashButton = document.createElement('button');
-trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-trashButton.classList.add("trash-btn")
-todoDiv.appendChild(trashButton);
+    //CHECK TRASH BUTTON
+    const trashButton = document.createElement('button');
+    trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+    trashButton.classList.add("trash-btn")
+    todoDiv.appendChild(trashButton);
 
-//APPEND TO LIST
-todoList.appendChild(todoDiv);
+    //APPEND TO LIST
+    todoList.appendChild(todoDiv);
 
-//CLEAR TO DO INPUT VALUE
+    //CLEAR TO DO INPUT VALUE
 
-todoInput.value = "";
+    todoInput.value = "";
 
 }
 

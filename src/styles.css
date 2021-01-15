@@ -1,17 +1,36 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: "Didact Gothic", sans-serif;
-  background-image: linear-gradient(to top, #e7f0fd, teal);
+  background-image: linear-gradient(30deg, #abd5fa 50%, #eeb0fa 50%);
+  min-height: 101vh;
+}
+
+.box {
+  margin-top: 5%;
+  position: relative;
   min-height: 100vh;
+}
+
+.appContainer {
+  margin: 0 auto;
+  box-shadow: 0 0 50px gray;
+  box-sizing: border-box;
+  border: 1px white solid;
+  border-radius: 60px;
+  min-height: 30em;
+  max-width: 40em;
+  background-color: white;
+  padding-bottom: 1rem;
+  margin-bottom: 4%;
 }
 
 header {
   font-size: 1.5rem;
+  color: rgb(146, 145, 145);
 }
 
 header,
@@ -21,25 +40,42 @@ form {
   justify-content: center;
   align-items: center;
 }
+.inputBox {
+  box-shadow: 0 0 15px gray;
+  border: 1px solid white;
+  border-radius: 30px;
+  min-height: 2.7rem;
+}
+
+form input {
+  color: rgb(82, 80, 80);
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  min-height: 2.5rem;
+  border-radius: 30px;
+  min-width: 20rem;
+}
 
 form input,
 form button {
-  font-size: 2rem;
   border: none;
-  background: white;
 }
 
 form button {
-  color: teal;
-  background: white;
+  font-size: 2rem;
+  color: white;
+  background: #e89af8;
   cursor: pointer;
-  padding-right: 3px;
-  padding-left: 3.5px;
+  border-radius: 30px;
+  margin-top: 0.3rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding: 0.2rem 0.4rem;
   transition: all 0.2s ease-in;
 }
 
 form button:hover {
-  background: teal;
+  background: #a0d1fc;
   color: white;
 }
 
@@ -47,41 +83,54 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .todo-list {
-  min-width: 40%;
   list-style: none;
+  min-width: 90%;
 }
 
 .todo {
   margin: 0.5rem;
   background: white;
-  color: black;
+  color: rgb(82, 80, 80);
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s ease-in;
+  box-shadow: 0 0 10px gray;
+  border: 1px solid white;
+  border-radius: 30px;
 }
 
 .todo li {
   flex: 1;
+  max-width: 82%;
+  overflow-wrap: break-word;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .trash-btn,
 .complete-btn {
-  background-color: teal;
+  background: #e89af8;
   color: white;
   border: none;
+  border-radius: 30px;
   padding: 0.75rem;
   cursor: pointer;
   font-size: 1rem;
-  margin: ;
+  margin-top: 0.3rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.2rem;
+  padding: 0.65rem;
 }
 
 .complete-btn {
-  background-color: rgb(81, 218, 81);
+  background-color: #a0d1fc;
 }
 
 .todo-item {
@@ -109,33 +158,54 @@ select {
   appearance: none;
   outline: none;
   border: none;
+  color: rgb(82, 80, 80);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
 }
 
 .select {
   margin: 1rem;
   position: relative;
   overflow: hidden;
-}
-
-select {
-  color: teal;
-  width: 10rem;
-  cursor: pointer;
-  padding: 1rem;
+  box-shadow: 0 0 15px gray;
+  border: 1px solid white;
+  border-radius: 30px;
 }
 
 .select::after {
   content: "\25BC";
   position: absolute;
-  background-color: teal;
+  background-color: #e89af8;
   color: white;
   bottom: 0;
   right: 0;
-  padding: 1rem;
+  margin-top: 0.3rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.2rem;
+  padding: 0.65rem;
   pointer-events: none;
+  border-radius: 30px;
 }
 
 .select:hover::after {
-  background: white;
-  color: teal;
+  background: #a0d1fc;
+  color: white;
+}
+
+.signature {
+  bottom: 0;
+  text-align: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.signature a {
+  color: #48aaff;
+  text-decoration: none;
+}
+
+.signature a:hover {
+  color: gray;
+  text-decoration: underline;
 }
